@@ -11,15 +11,30 @@
 
 ## STM32 工程
 
-`STM32/` 下共 7 个 Keil 工程：
+`STM32/` 下共 22 个 Keil 工程（最后同步：2026-11-06），详细列表见 [`STM32/README.md`](STM32/README.md)：
 
-- `STM32LED_begin` — 点灯
-- `STM32LED_Dynamic` — 流水灯
+- `STM32_LED_begin` — 点灯 / 闪烁
+- `STM32_LED_Dynamic` — 流水灯
 - `STM32_GPIO_input` — 按键输入
 - `STM32_Sound` — 蜂鸣器
 - `STM32_lightcontrol_sound` — 光敏传感器控制蜂鸣器
 - `STM32_Light_count` — 计数传感器 + OLED
-- `STM32_OLED` — OLED 显示（江科大 4-1 驱动）
+- `STM32_OLED` — OLED 显示
+- `STM32_Timer` — 定时器中断
+- `STM32_Timer _Infrared_sensor` — 定时器中断（进阶）
+- `STM32_Timer_Hardware_Input` — 定时器编码器接口
+- `STM32_PWM_LED_Breath` — PWM 呼吸灯
+- `STM32_PWM_Input_Ouput` — PWM 输入捕获
+- `STM32_PWM_Input_Ouput_pro` — PWM 输入捕获（进阶）
+- `STM32_PWM_Sprial` — PWM 调速练习
+- `STM32_PWM_Steering_machine` — PWM 舵机
+- `STM32_AD_signed` — ADC 采集 + 电压显示
+- `STM32_AD_multiple` — ADC 多通道
+- `STM32_DMA_Inside_Transport` — DMA 内存转运
+- `STM32_DMA_AD_Transport` — DMA + ADC
+- `STM32_USART_Send` — 串口发送
+- `STM32_USART_Recept` — 串口接收
+- `______________CODE_CONTENT` — 课程笔记
 
 打开方式：Keil 打开对应工程目录下的 `beginproject.uvprojx`，F7 编译。
 

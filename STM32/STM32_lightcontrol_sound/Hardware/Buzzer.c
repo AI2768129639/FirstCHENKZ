@@ -1,6 +1,6 @@
 #include "stm32f10x.h"                  // Device header
 extern void Delay(volatile unsigned int count);
-
+//配置蜂鸣器模块
 void Buzzer_Init(void){
 	
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -15,7 +15,7 @@ void Buzzer_Init(void){
 	
 	GPIO_SetBits(GPIOB, GPIO_Pin_12);
 }
-
+//配置电平来控制是否发声
 void Buzzer_ON (void){
 	GPIO_ResetBits(GPIOB, GPIO_Pin_12);
 }

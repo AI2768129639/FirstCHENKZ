@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "name": "STM32",
+      "includePath": [
+        "${workspaceFolder}/Start",
+        "${workspaceFolder}/Library",
+        "${workspaceFolder}/USER",
+        "${workspaceFolder}/User",
+        "${workspaceFolder}/**"
+      ],
+      "defines": [
+        "USE_STDPERIPH_DRIVER",
+        "STM32F10X_MD"
+      ],
+      "compilerPath": "C:/mingw64/bin/gcc.exe",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-gcc-x64"
+    }
+  ],
+  "version": 4
+}

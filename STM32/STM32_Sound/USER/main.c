@@ -5,6 +5,7 @@ void Delay(volatile unsigned int count) {
     for(; count != 0; count--){
 	}
 }
+//配置好GPIO初始化
 int main (void){
 	GPIO_InitTypeDef GPIO_InitStructure;
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
@@ -14,7 +15,7 @@ int main (void){
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
-	
+	//不断交替发声
 	while (1){
 		GPIO_ResetBits(GPIOA, GPIO_Pin_12);
 		Delay(5000000);

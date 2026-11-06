@@ -9,17 +9,17 @@ void CountSensor_Init(void){
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_14;
  	GPIO_Init(GPIOB, &GPIO_InitStructure);
-	//配置AFIO
+	//配置AFIO 中断引脚选择 发送到EXTI
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
 	GPIO_EXTILineConfig(GPIO_PortSourceGPIOB, GPIO_PinSource14);
-	//配置EXTI
+	//配置EXTI  触发中断
 	EXTI_InitTypeDef EXTI_InitStructure;
 	EXTI_InitStructure.EXTI_Line = EXTI_Line14;
 	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
 	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
 	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
 	EXTI_Init(&EXTI_InitStructure);
-	//配置NVIC
+	//配置NVIC  接受中断配置优先级
 	NVIC_InitTypeDef NVIC_InitStructure;
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;

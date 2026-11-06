@@ -7,12 +7,13 @@ void Key_Init(void){
 	GPIO_InitTypeDef GPIO_InitStructure;
 	
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_11;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
 }
 //按键通断函数
+//通过数字来控制灯亮灭
 uint8_t Key_GetNum(void){
 	//定义执行代表变量
 	uint8_t GetNum = 0;

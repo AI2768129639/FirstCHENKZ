@@ -14,7 +14,7 @@ void Light_control_Init(void){
 	
 	GPIO_SetBits(GPIOB, GPIO_Pin_13);
 
-}
+}//光敏条件
 uint8_t Light_control_Get(void){
 	
 	return GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_13);

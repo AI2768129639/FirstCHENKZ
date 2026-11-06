@@ -7,8 +7,10 @@ void Delay(volatile unsigned int count) {
 	}
 }
 int main (void){
+	//初始化
 	Buzzer_Init();
 	Light_control_Init();
+	//通过光的变化控制蜂鸣器发声
 	while (1){
 		if ((Light_control_Get()) == 1){
 			Buzzer_ON();

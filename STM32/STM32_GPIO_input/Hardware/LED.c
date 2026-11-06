@@ -13,7 +13,7 @@ void LED_Init(void){
 	
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 }
-//LED开关函数
+//LED开关函数 按键控制高低电平来控制灯
 void LED_Reverse (GPIO_TypeDef* GPIOX, uint16_t GPIO_Pin){
 	if (GPIO_ReadOutputDataBit(GPIOX, GPIO_Pin) == 0){
 		GPIO_SetBits(GPIOX, GPIO_Pin);
