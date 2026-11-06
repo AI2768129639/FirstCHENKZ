@@ -23,3 +23,21 @@ Release/
 *.dt.d.json
 *.lastbuildstate
 *.log
+# Keil / uVision build artifacts
+Objects/
+Listings/
+*.uvguix.*
+*.uvprojx.bak-*
+*.o
+*.d
+*.crf
+*.dep
+*.axf
+*.hex
+*.lnp
+*.map
+*.htm
+*.sct
+*.iex
+*.lst
+*.bak
